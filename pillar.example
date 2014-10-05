@@ -1,3 +1,17 @@
-template:
-  lookup:
-    master: template-master
+docker:
+  containers:
+    dock0/service:
+      - pulled
+    bsdlp/irssi:
+      - running
+      - detach: True
+      - ports:
+        - "113/tcp":
+          HostIp: "0.0.0.0"
+          HostPort: "113"
+        - "22/tcp":
+          HostIp: "0.0.0.0"
+          HostPort: "2222"
+      - volumes:
+        - /srv/irssi/.irssi:/home/jchen/.irssi
+        - /srv/irssi/irclogs:/home/jchen/irclogs
