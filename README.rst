@@ -1,9 +1,8 @@
-================
-template-formula
-================
+==============
+docker-formula
+==============
 
-A saltstack formula that is empty. It has dummy content to help with a quick
-start on a new formula.
+A formula to set up docker, including pulling down containers and running them.
 
 .. note::
 
@@ -16,7 +15,7 @@ Available states
 .. contents::
     :local:
 
-``template``
+``daemon``
 ------------
 
-Installs the template package, and starts the associated template service.
+Installs the docker daemon, and starts the service.
