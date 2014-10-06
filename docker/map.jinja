@@ -1,0 +1,5 @@
+{% set template = salt['grains.filter_by']({
+    'default': {
+        'pip': 'python-pip'
+    },
+}, merge=salt['pillar.get']('docker:lookup')) %}
